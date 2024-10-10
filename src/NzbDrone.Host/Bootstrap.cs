@@ -198,6 +198,7 @@ namespace NzbDrone.Host
                     {
                         serverOptions.AllowSynchronousIO = false;
                         serverOptions.Limits.MaxRequestBodySize = null;
+                        serverOptions.Limits.MaxRequestLineSize = Int32.MaxValue;
                     });
                     builder.UseStartup<Startup>();
                 });
